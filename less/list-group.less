@@ -110,10 +110,10 @@ button.list-group-item {
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
-.list-group-item-variant(success; @state-success-bg; @state-success-text);
-.list-group-item-variant(info; @state-info-bg; @state-info-text);
-.list-group-item-variant(warning; @state-warning-bg; @state-warning-text);
-.list-group-item-variant(danger; @state-danger-bg; @state-danger-text);
+.list-group-item-variant(success; #fff; #000; @brand-success; #fff);
+.list-group-item-variant(info; #fff; #000; @brand-info; #fff);
+.list-group-item-variant(warning; #fff; #000; @brand-warning; #fff);
+.list-group-item-variant(danger; #fff; #000; @brand-danger; #fff);
 
 
 // Custom content options
@@ -125,6 +125,7 @@ button.list-group-item {
   margin-bottom: 5px;
 }
 .list-group-item-text {
+  color: #000;
   margin-bottom: 0;
   line-height: 1.3;
 }

@@ -1,6 +1,6 @@
 // List Groups
 
-.list-group-item-variant(@state; @background; @color) {
+.list-group-item-variant(@state; @background; @color; @bg-hover; @color-hover) {
   .list-group-item-@{state} {
     color: @color;
     background-color: @background;
@@ -15,15 +15,15 @@
 
       &:hover,
       &:focus {
-        color: @color;
-        background-color: darken(@background, 5%);
+        color: @color-hover;
+        background-color: @bg-hover;
       }
       &.active,
       &.active:hover,
       &.active:focus {
-        color: #fff;
-        background-color: @color;
-        border-color: @color;
+        color: @color-hover;
+        background-color: @bg-hover;
+        border-color: @bg-hover;
       }
     }
   }

@@ -10,10 +10,13 @@
 
 .navbar {
   position: relative;
-  padding-top: @navbar-padding-top;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
+
+  border-bottom: 3px solid #E1E1E1;
+
+  padding-top: @navbar-padding-top;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -168,6 +171,11 @@
   line-height: @line-height-computed;
   height: @navbar-height;
 
+  margin-top: -50px;
+  padding-top: -50px;
+  padding-left: 30px;
+  margin-left: 30px;
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -290,8 +298,6 @@
   padding: 10px @navbar-padding-horizontal;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  @shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-  .box-shadow(@shadow);
 
   // Mixin behavior for optimum display
   .form-inline();
@@ -317,7 +323,6 @@
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    .box-shadow(none);
   }
 }
 

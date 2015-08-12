@@ -232,20 +232,20 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    #fff;
+@dropdown-bg:                    #f1f1f1;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-border:                rgba(0,0,0,.00);
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       #ccc;
+@dropdown-fallback-border:       #f1f1f1;
 //** Divider color for between dropdown items.
 @dropdown-divider-bg:            #e5e5e5;
 
 //** Dropdown link text color.
-@dropdown-link-color:            @gray-dark;
+@dropdown-link-color:            #2f2f2f;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-color:      #2f2f2f;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         #f5f5f5;
+@dropdown-link-hover-bg:         #d9d9d9;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -259,7 +259,7 @@
 @dropdown-header-color:          @gray-light;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
-@dropdown-caret-color:           #000;
+@dropdown-caret-color:           #2f2f2f;
 
 
 //-- Z-index master list
@@ -358,7 +358,6 @@
 
 // Basics of a navbar
 @navbar-height:                    50px;
-@navbar-padding-top:               55px;
 
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
@@ -366,33 +365,28 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #000000;
+@navbar-default-color:             #2f2f2f;
 @navbar-default-bg:                #ffffff;
 @navbar-default-border:            #eeeeee;
 
 // Navbar links
-@navbar-default-link-color:                #000;
-@navbar-default-link-hover-color:          #1570a6;
-@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-color:                #2f2f2f;
+@navbar-default-link-hover-color:          #2f2f2f;
+@navbar-default-link-hover-bg:             #F2F2F2;
 @navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            transparent;
+@navbar-default-link-active-bg:            #F2F2F2;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
-//Navbar simple links
-@navbar-default-simple-link-color:			#0078d7;
-@navbar-default-simple-link-hover-color:	#000;
-@navbar-default-simple-link-disabled-color:	#000;
-
 // Navbar brand label
-@navbar-default-brand-color:               @navbar-default-simple-link-color;
-@navbar-default-brand-hover-color:         @navbar-default-simple-link-hover-color;
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         @navbar-default-link-hover-color;
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           #ddd;
-@navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       #ddd;
+@navbar-default-toggle-hover-bg:           #ffffff;
+@navbar-default-toggle-icon-bar-bg:        #F2F2F2;
+@navbar-default-toggle-border-color:       #2f2f2f;
 
 
 //=== Inverted navbar
@@ -529,7 +523,7 @@
 //** Tooltip text color
 @tooltip-color:               #fff;
 //** Tooltip background color
-@tooltip-bg:                  #000;
+@tooltip-bg:                  #2f2f2f;
 @tooltip-opacity:             .9;
 
 //** Tooltip arrow width
@@ -610,7 +604,7 @@
 @modal-content-fallback-border-color:          #999;
 
 //** Modal backdrop background color
-@modal-backdrop-bg:           #000;
+@modal-backdrop-bg:           #2f2f2f;
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      .5;
 //** Modal header border color
@@ -703,7 +697,7 @@
 //** Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
-@list-group-link-color:         #000;
+@list-group-link-color:         #2f2f2f;
 @list-group-link-hover-color:   @list-group-link-color;
 @list-group-link-heading-color: #333;
 
@@ -831,7 +825,7 @@
 //##
 
 @close-font-weight:           bold;
-@close-color:                 #000;
+@close-color:                 #2f2f2f;
 @close-text-shadow:           0 1px 0 #fff;
 
 

@@ -1082,7 +1082,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  padding-top: 105px;
+  padding-top: 50px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
@@ -3588,11 +3588,11 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #f1f1f1;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .15);
+  border: 1px solid #f1f1f1;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
           box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
@@ -3609,18 +3609,49 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 15px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333;
+  color: #2f2f2f;
+  text-decoration: none;
   white-space: nowrap;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
+  color: #2f2f2f;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #d9d9d9;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3699,6 +3730,67 @@ tbody.collapse.in {
     right: auto;
     left: 0;
   }
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu > a:after {
+  display: block;
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 5px;
+  margin-right: -10px;
+  content: " ";
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #2f2f2f;
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #2f2f2f;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 0;
+}
+.dropdown-submenu > li > a {
+  background-color: #d9d9d9;
+}
+.dropdown-submenu > li > a:hover,
+.dropdown-submenu > li > a:focus {
+  text-decoration: none;
+  text-decoration: underline;
+  background-color: #d9d9d9;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .btn-group,
 .btn-group-vertical {
@@ -4219,10 +4311,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  padding-top: 55px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  border-bottom: 3px solid #e1e1e1;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4330,10 +4420,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  padding-top: -50px;
-  padding-left: 30px;
-  margin-top: -50px;
-  margin-left: 30px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -4431,6 +4517,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4498,6 +4586,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
     margin-left: 0;
     border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 .navbar-nav > li > .dropdown-menu {
@@ -4552,29 +4642,61 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #eee;
 }
 .navbar-default .navbar-brand {
-  color: #0078d7;
+  color: #2f2f2f;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #000;
+  color: #2f2f2f;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #000;
+  color: #2f2f2f;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #000;
+  color: #2f2f2f;
+  text-decoration: none;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #1570a6;
-  background-color: transparent;
+  color: #2f2f2f;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: transparent;
+  background-color: #f2f2f2;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4583,14 +4705,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  border-color: #2f2f2f;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: #fff;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: #f2f2f2;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -4600,22 +4722,22 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #555;
-  background-color: transparent;
+  background-color: #f2f2f2;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #000;
+    color: #2f2f2f;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #1570a6;
-    background-color: transparent;
+    color: #2f2f2f;
+    background-color: #f2f2f2;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: transparent;
+    background-color: #f2f2f2;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4625,23 +4747,55 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #0078d7;
+  color: #2f2f2f;
 }
 .navbar-default .navbar-link:hover {
-  color: #000;
+  color: #2f2f2f;
 }
 .navbar-default .btn-link {
-  color: #0078d7;
+  color: #2f2f2f;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #000;
+  color: #2f2f2f;
+  text-decoration: none;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
 .navbar-default .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #000;
+  color: #ccc;
+  text-decoration: none;
+  -webkit-transition: background-color ease-out .5s;
+       -o-transition: background-color ease-out .5s;
+          transition: background-color ease-out .5s;
+  -webkit-transition-delay: initial;
+       -o-transition-delay: initial;
+          transition-delay: initial;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
 }
 .navbar-inverse {
   background-color: #222;
@@ -4700,7 +4854,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #080808;
+    border-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
     background-color: #080808;
@@ -5313,7 +5467,7 @@ a.thumbnail.active {
 }
 a.list-group-item,
 button.list-group-item {
-  color: #000;
+  color: #2f2f2f;
 }
 a.list-group-item .list-group-item-heading,
 button.list-group-item .list-group-item-heading {
@@ -5323,7 +5477,7 @@ a.list-group-item:hover,
 button.list-group-item:hover,
 a.list-group-item:focus,
 button.list-group-item:focus {
-  color: #000;
+  color: #2f2f2f;
   text-decoration: none;
   background-color: #fff;
 }
@@ -5893,14 +6047,14 @@ button.list-group-item-danger.active:focus {
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000;
+  color: #2f2f2f;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
   opacity: .2;
 }
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #2f2f2f;
   text-decoration: none;
   cursor: pointer;
   filter: alpha(opacity=50);
@@ -5971,7 +6125,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: #2f2f2f;
 }
 .modal-backdrop.fade {
   filter: alpha(opacity=0);
@@ -6086,7 +6240,7 @@ button.close {
   padding: 3px 8px;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #2f2f2f;
   border-radius: 0;
 }
 .tooltip-arrow {
@@ -6101,56 +6255,56 @@ button.close {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #2f2f2f;
 }
 .tooltip.top-left .tooltip-arrow {
   right: 5px;
   bottom: 0;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #2f2f2f;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   left: 5px;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #2f2f2f;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #000;
+  border-right-color: #2f2f2f;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #000;
+  border-left-color: #2f2f2f;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #2f2f2f;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   right: 5px;
   margin-top: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #2f2f2f;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   left: 5px;
   margin-top: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #2f2f2f;
 }
 .popover {
   position: absolute;

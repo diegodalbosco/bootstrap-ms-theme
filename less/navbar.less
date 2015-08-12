@@ -14,10 +14,6 @@
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
 
-  border-bottom: 3px solid #E1E1E1;
-
-  padding-top: @navbar-padding-top;
-
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
 
@@ -171,11 +167,6 @@
   line-height: @line-height-computed;
   height: @navbar-height;
 
-  margin-top: -50px;
-  padding-top: -50px;
-  padding-left: 30px;
-  margin-left: 30px;
-
   &:hover,
   &:focus {
     text-decoration: none;
@@ -298,6 +289,8 @@
   padding: 10px @navbar-padding-horizontal;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  @shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+  .box-shadow(@shadow);
 
   // Mixin behavior for optimum display
   .form-inline();
@@ -323,6 +316,7 @@
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    .box-shadow(none);
   }
 }
 
@@ -418,11 +412,23 @@
   .navbar-nav {
     > li > a {
       color: @navbar-default-link-color;
+        transition: background-color ease-out .5s;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+        transition-delay: initial;
+        text-decoration: none;
 
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
+          transition: background-color ease-out .5s;
+          transition-property: background-color;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-out;
+          transition-delay: initial;
+          text-decoration: none;
       }
     }
     > .active > a {
@@ -508,23 +514,35 @@
   // Add a class to ensure links outside the navbar nav are colored correctly.
 
   .navbar-link {
-    color: @navbar-default-simple-link-color;
+    color: @navbar-default-link-color;
     &:hover {
-      color: @navbar-default-simple-link-hover-color;
+      color: @navbar-default-link-hover-color;
     }
   }
 
   .btn-link {
-    color: @navbar-default-simple-link-color;
+    color: @navbar-default-link-color;
     &:hover,
     &:focus {
-      color: @navbar-default-simple-link-hover-color;
+      color: @navbar-default-link-hover-color;
+        transition: background-color ease-out .5s;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+        transition-delay: initial;
+        text-decoration: none;
     }
     &[disabled],
     fieldset[disabled] & {
       &:hover,
       &:focus {
-        color: @navbar-default-simple-link-disabled-color;
+        color: @navbar-default-link-disabled-color;
+          transition: background-color ease-out .5s;
+          transition-property: background-color;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-out;
+          transition-delay: initial;
+          text-decoration: none;
       }
     }
   }
@@ -609,7 +627,7 @@
       // Dropdowns get custom display
       .open .dropdown-menu {
         > .dropdown-header {
-          border-color: @navbar-inverse-border;
+          border-color: transparent;
         }
         .divider {
           background-color: @navbar-inverse-border;

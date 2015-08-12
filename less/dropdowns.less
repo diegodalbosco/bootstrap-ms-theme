@@ -64,12 +64,18 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 3px 20px;
+    padding: 15px 20px;
     clear: both;
     font-weight: normal;
     line-height: @line-height-base;
     color: @dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+      transition: background-color ease-out .5s;
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      transition-delay: initial;
+      text-decoration: none;
   }
 }
 
@@ -77,6 +83,11 @@
 .dropdown-menu > li > a {
   &:hover,
   &:focus {
+    transition: background-color ease-out .5s;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-delay: initial;
     text-decoration: none;
     color: @dropdown-link-hover-color;
     background-color: @dropdown-link-hover-bg;
@@ -212,5 +223,73 @@
     .dropdown-menu-left {
       .dropdown-menu-left();
     }
+  }
+}
+
+
+// Multi layer dropdown
+//
+// ms-theme
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #2f2f2f;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #2f2f2f;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.dropdown-submenu > li > a {
+  background-color: @dropdown-link-hover-bg;
+  &:hover,
+  &:focus {
+    transition: background-color ease-out .5s;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-delay: initial;
+    text-decoration: none;
+    text-decoration: underline;
+    background-color: #d9d9d9;
   }
 }

@@ -13,12 +13,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme 
+    <!-- Bootstrap theme
     <link href="./dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
     <!-- Custom styles for this template -->
     <link href="theme.css" rel="stylesheet">
-
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./assets/js/ie-emulation-modes-warning.js"></script>
@@ -57,24 +56,77 @@
                   <li><a href="#">Action</a></li>
                   <li><a href="#">Another action</a></li>
                   <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
                   <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
                   <li><a href="#">One more separated link</a></li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Hover me for more options</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level</a></li>
+                      <li class="dropdown-submenu">
+                        <a href="#">Even More..</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">3rd level</a></li>
+                          <li><a href="#">3rd level</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Second level</a></li>
+                      <li><a href="#">Second level</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
+              <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">s</button>
+                </span>
+              </div><!-- /input-group -->
+            </div>
             </form>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
     <div class="container theme-showcase" role="main">
+
+
+      <div class="container">
+      	<div class="row">
+            <blockquote>
+              <p><a href="http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3">http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3</a></p>
+              <footer>Thanks for this snippets to  <cite title="Source Title">msurguy</cite></footer>
+            </blockquote>
+              <hr>
+              <div class="dropdown">
+                  <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+                      Dropdown <span class="caret"></span>
+                  </a>
+          		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <li><a href="#">Some action</a></li>
+                    <li><a href="#">Some other action</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">Hover me for more options</a>
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Second level</a></li>
+                        <li class="dropdown-submenu">
+                          <a href="#">Even More..</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">3rd level</a></li>
+                          	<li><a href="#">3rd level</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Second level</a></li>
+                        <li><a href="#">Second level</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+              </div>
+      	</div>
+      </div>
+
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">

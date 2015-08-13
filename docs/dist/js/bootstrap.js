@@ -908,6 +908,20 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
+
++function ($) {
+  'use strict';
+  $(".dropdown-submenu > a").on("click",function(e){
+    e.preventDefault();
+    $('html').one('click',function() {
+      $('.dropdown-menu ul').removeClass('trigger');
+    });
+    $(this).parent().siblings('.dropdown-menu li, .dropdown-submenu li').find('ul').removeClass('trigger');
+    $(this).parent().find('.dropdown-menu').first();.toggleClass('trigger');
+    e.stopPropagation();
+  });
+}(jQuery);
+
 /* ========================================================================
  * Bootstrap: modal.js v3.3.5
  * http://getbootstrap.com/javascript/#modals

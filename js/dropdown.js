@@ -161,5 +161,16 @@
     .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
     .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
     .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+    .on('click', '.dropdown-submenu', function(e) {
+      //Dropdown submenu component
+      $('html').one('click',function(ev) {
+           if (!$(ev.toElement).parent().hasClass('dropdown-submenu')) $('.dropdown-menu').removeClass('trigger');
+          //console.log("Here I have to close all the submenu of the page", $(ev.toElement).parent());
+      });
+      e.preventDefault();
+      $(this).siblings('.dropdown-submenu').find('.dropdown-menu').removeClass('trigger');
+      $(this).children('.dropdown-menu, .dropdown-submenu').toggleClass('trigger');
+      e.stopPropagation();
+    })
 
 }(jQuery);

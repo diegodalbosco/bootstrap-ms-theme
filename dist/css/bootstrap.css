@@ -3741,7 +3741,7 @@ tbody.collapse.in {
   margin-left: -1px;
   border-radius: 0;
 }
-.dropdown-submenu:hover > .dropdown-menu {
+.trigger {
   display: block;
 }
 .dropdown-submenu > a:after {

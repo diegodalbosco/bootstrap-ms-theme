@@ -14,7 +14,7 @@ It needs bootstrap.js to work!
 ###Example
 Here an example of its usage:
 
-```
+```html
   <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Main dropdown <span class="caret"></span></a>
     <ul class="dropdown-menu">
